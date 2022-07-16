@@ -42,11 +42,11 @@ int main()
 	m.emplace(3,"Jacob lurie");// creates objects in place 
 
 	cout << m << endl;
-  cout << m[90] << endl;
+  	cout << m[90] << endl;
   
-  m[100]; // this is a valid statement, It will create a key value pair as {100, }
+  	m[100]; // this is a valid statement, It will create a key value pair as {100, }
   
-  cout << m << endl;
+  	cout << m << endl;
 	cout << m.size() << endl;
 
 	if(m.empty())
@@ -86,7 +86,5 @@ int main()
 	else{
 		cout << "Not empty yet..." << endl;
 	}
-
-	//
 	return 0;
 }
