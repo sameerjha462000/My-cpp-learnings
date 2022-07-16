@@ -22,7 +22,7 @@ int main()
 			freopen("output.txt","w",stdout);
 			freopen("error.txt","w",stderr);
 	#endif
-  // map uses "AVL trees"(self balancing trees)
+  	// map uses "AVL trees"(self balancing trees)
 	map<int,string> m;
 	m[0] = "Abhishek";
 	m[-89] = "Bhoomika";
