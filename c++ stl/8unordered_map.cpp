@@ -23,17 +23,17 @@ int main()
 			freopen("error.txt","w",stderr);
 	#endif
 
-	// It does not stores the key in sorted order
-	// Also, does not preserve the insertion order
-	// They use hash-tables 
-
-	// Use unordered_map when you do not want the keys to be stored in sorted order
-	// i.e. In case when order is not important(only frequency matters)
-
-	// All the operations are in O(1)
-	// You cannot use complex keys as their hash codes are not defined in the 
-	// standard library. Either you will have to define them sepearately or you can use "std::boost" library
-	// Valid keys are -- int, char,float,double,bool,string etc...
+	/**
+	 * It does not stores the key in sorted order
+	 * Also, does not preserve the insertion order
+	 * They use hash-tables 
+	 * Use unordered_map when you do not want the keys to be stored in sorted order
+	 * i.e. In case when order is not important(only frequency matters)
+	 * All the operations are in O(1)
+	 * cannot use complex keys as their hash codes are not defined in the 
+	 * standard library. Either you will have to define them sepearately or you can use "std::boost" library
+	 * Valid keys are -- int, char,float,double,bool,string etc...
+	 **/
 	unordered_map<int, string> m;
 
 	m.insert({1,"Abhishek"});
@@ -56,7 +56,13 @@ int main()
 		cout << "unordered map is not empty..." << endl;
 	}
 
-	// erasing an element
+	
+	/**
+	 * For erasing an object we can use erase method, The erase method
+	 * can either take an iterator or a key 
+	 * 
+	 * Better to pass in a key as when passing an iterator you do not know which key it is pointing to
+	 **/
 
 	m.erase(m.begin()); // do not use this as use do not know which element it points to
 	cout << m << endl;
@@ -66,9 +72,17 @@ int main()
 
 	cout << m << endl;
 
-	// finding an element in unordered map
+	/**
+	 * Finding a key in unordered_map
+	 * 
+	 * For this we use `find` method which takes in a key and searches for it in the u_map
+	 * 
+	 * The function returns an iterator, if the key is found then we get a valid iterator 
+	 * otherwise we get the end iterator of the 
+	 * u_map
+	 **/
 
-	auto it = m.find(1); // checks whether the key is present 
+	auto it = m.find(1);
 
 	if(it == m.end())
 		cout << "Key not found..." << endl;
@@ -77,7 +91,10 @@ int main()
 	}
 
 
-	// emptying the unordered map
+	
+	/**
+	 * For emptying the u_map we can use clear() method
+	 **/
 
 	m.clear();
 
