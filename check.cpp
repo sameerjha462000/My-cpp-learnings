@@ -1,3 +1,4 @@
+// stack.top() might be null so make a check of that.... 
 #include <iostream>
 #include <stack>
 
